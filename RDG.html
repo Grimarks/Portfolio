@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo">Darrell's Portfolio</a>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Projects</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="MH.html">MediaHeaven</a></li>
+                        <li><a href="KQ.html">KostQu</a></li>
+                        <li><a href="WA.html">Weather App</a></li>
+                        <li><a href="abs.html">Absensi</a></li>
+                        <li><a href="RPUG.html">Password & Username Generator</a></li>
+                        <li><a href="RDG.html">Random Dice Generator</a></li>
+                        <li><a href="GTN.html">Guess The Number</a></li>
+                    </ul>
+                </li>
+                <li><a href="background.html">Background</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Social Media</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://www.instagram.com/darrell.satriano" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/in/darrell-satriano-b54380258/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/Grimarks" target="_blank">GitHub</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="project-header">
+        <div class="container">
+            <h1>Random Dice Generator</h1>
+            <p>Welcome to the Random Dice Generator, a fun and practical tool to simulate dice rolls. Perfect for playing games with friends when you suddenly need dice! This project was created for fun and as a learning experience while exploring JavaScript.</p>
+        </div>
+    </section>
+
+    <section class="project-content">
+        <div class="container">
+            <div class="image-section">
+                <img src="../foto/project/RDG1.png" alt="Random Dice Generator Interface">
+                <img src="../foto/project/RDG2.png" alt="Random Dice Generator Interface">
+                <img src="../foto/project/RDG3.png" alt="Rolling Dice Results">
+            </div>
+            <div class="details-section">
+                <h2>About the Project</h2>
+                <p>The Random Dice Generator is a simple web application that generates random dice rolls based on the number of dice specified by the user. Built with HTML, CSS, and JavaScript, it demonstrates the basics of frontend development and introduces backend logic implementation for a fun and interactive experience.</p>
+
+                <h3>Key Features</h3>
+                <ul>
+                    <li><strong>Custom Number of Dice:</strong> Input the desired number of dice to roll.</li>
+                    <li><strong>Real-Time Results:</strong> Displays both numerical and visual results of the dice rolls.</li>
+                    <li><strong>Clean User Interface:</strong> Simple and intuitive design for a seamless experience.</li>
+                    <li><strong>Responsive Design:</strong> Works well on various screen sizes, including mobile devices.</li>
+                </ul>
+
+                <h3>Development Process</h3>
+                <p>The project began as a way to practice JavaScript and understand how to combine it with HTML and CSS to create an interactive application. The front-end was designed to be visually appealing with a gradient background and centered layout. JavaScript was used to implement the core functionality of generating random dice rolls and dynamically updating the results in the interface.</p>
+
+                <h3>Challenges and Solutions</h3>
+                <p>
+                    <strong>Challenge 1:</strong> Understanding and implementing the backend logic for generating random dice rolls.<br>
+                    <strong>Solution:</strong> Learned the use of JavaScript's `Math.random()` function and applied trial-and-error to refine the logic.<br><br>
+                    <strong>Challenge 2:</strong> Displaying dice images dynamically based on roll results.<br>
+                    <strong>Solution:</strong> Created a folder of dice images and used JavaScript to dynamically load the correct image for each roll.<br><br>
+                    <strong>Challenge 3:</strong> Ensuring a responsive and user-friendly design.<br>
+                    <strong>Solution:</strong> Used CSS media queries and flexible layouts to adapt the interface to different screen sizes.
+                </p>
+
+                <h3>Technologies Used</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-links">
+        <div class="container">
+            <h2>Explore More</h2>
+            <a href="#" class="button">Download Project</a>
+            <a href="#" class="button">View Source Code</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Darrell's Portfolio. All rights reserved.</p>
+    </div>
+</footer>
+<script>
+    document.querySelectorAll('.dropdown-toggle').forEach(item => {
+        item.addEventListener('click', event => {
+            event.preventDefault();
+
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                if (menu !== item.nextElementSibling) {
+                    menu.classList.remove('show');
+                }
+            });
+
+            const dropdownMenu = item.nextElementSibling;
+            dropdownMenu.classList.toggle('show');
+        });
+    });
+
+    window.addEventListener('click', function (event) {
+        if (!event.target.matches('.dropdown-toggle')) {
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                menu.classList.remove('show');
+            });
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: #1e1e1e;
+    color: #fff;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.navbar {
+    background: #292929;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar nav {
+    float: right;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+}
+
+.menu a:hover {
+    background: #444;
+    border-radius: 5px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #444;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    list-style: none;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 5px 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.dropdown-menu a:hover {
+    background: #555;
+}
+
+.project-header {
+    text-align: center;
+    padding: 60px 20px;
+    background: #292929;
+}
+
+.project-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #f0a500;
+}
+
+.project-header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #ddd;
+}
+
+.project-content {
+    display: grid;
+    gap: 40px;
+    margin-top: 40px;
+    align-items: start;
+}
+
+.image-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.image-section img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.image-section img:hover {
+    transform: scale(1.05);
+}
+
+
+.details-section {
+    background: #292929;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.details-section h2,
+.details-section h3 {
+    color: #f0a500;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.details-section p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #ddd;
+}
+
+.details-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.details-section ul li {
+    padding: 8px 0;
+    font-size: 0.95rem;
+    color: #ccc;
+}
+
+.details-section ul li::before {
+    content: '✔';
+    color: #f0a500;
+    margin-right: 10px;
+}
+
+.project-links {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.project-links h2 {
+    margin-bottom: 20px;
+    color: #f0a500;
+}
+
+.project-links .button {
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    color: #fff;
+    background: #444;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.project-links .button:hover {
+    background: #555;
+    transform: translateY(-2px);
+}
+
+footer {
+    text-align: center;
+    background: #292929;
+    padding: 20px;
+    margin-top: 20px;
+    color: #bbb;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}

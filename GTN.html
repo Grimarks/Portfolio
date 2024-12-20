@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo">Darrell's Portfolio</a>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Projects</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="MH.html">MediaHeaven</a></li>
+                        <li><a href="KQ.html">KostQu</a></li>
+                        <li><a href="WA.html">Weather App</a></li>
+                        <li><a href="abs.html">Absensi</a></li>
+                        <li><a href="RPUG.html">Password & Username Generator</a></li>
+                        <li><a href="RDG.html">Random Dice Generator</a></li>
+                        <li><a href="GTN.html">Guess The Number</a></li>
+                    </ul>
+                </li>
+                <li><a href="background.html">Background</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Social Media</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://www.instagram.com/darrell.satriano" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/in/darrell-satriano-b54380258/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/Grimarks" target="_blank">GitHub</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="project-header">
+        <div class="container">
+            <h1>Guess the Number</h1>
+            <p>"Guess the Number" is a simple yet entertaining game that challenges players to guess a randomly generated number between 1 and 10. This project is perfect for fun gatherings with friends and was developed using HTML, CSS, and JavaScript as part of a learning journey in JavaScript.</p>
+        </div>
+    </section>
+
+    <section class="project-content">
+        <div class="container">
+            <div class="image-section">
+                <img src="../foto/project/GTN1.png" alt="Guess the Number Game Interface">
+                <img src="../foto/project/GTN2.png" alt="Guess the Number Game Interface">
+                <img src="../foto/project/GTN3.png" alt="Guess the Number Results">
+            </div>
+            <div class="details-section">
+                <h2>About the Project</h2>
+                <p>"Guess the Number" is a lightweight and user-friendly web application designed to test your luck and intuition. The game generates a random number between 1 and 10, and players must try to guess the correct number. With visual feedback and score tracking, it makes for an engaging and competitive experience.</p>
+
+                <h3>Key Features</h3>
+                <ul>
+                    <li><strong>Random Number Generation:</strong> Each round generates a new random number between 1 and 10, ensuring a fair and unpredictable gameplay experience.</li>
+                    <li><strong>Score Tracking:</strong> Keeps track of both the player's and the bot's scores to determine overall performance.</li>
+                    <li><strong>User Input Validation:</strong> Ensures players only enter valid numbers within the specified range.</li>
+                    <li><strong>Interactive Feedback:</strong> Displays results for each round, letting the player know if they won or lost.</li>
+                </ul>
+
+                <h3>Development Process</h3>
+                <p>The game was built to practice and enhance JavaScript programming skills. HTML and CSS were used to create a clean and visually appealing layout, while JavaScript implemented the core logic, including random number generation, input validation, and dynamic score updates. The project is designed to be both entertaining and a hands-on coding exercise.</p>
+
+                <h3>Challenges and Solutions</h3>
+                <p>
+                    <strong>Challenge 1:</strong> Designing the backend logic for random number generation and score tracking.<br>
+                    <strong>Solution:</strong> Researched and experimented with JavaScript's Math.random() function, applying trial and error to refine the logic.<br><br>
+                    <strong>Challenge 2:</strong> Handling invalid or unexpected user inputs.<br>
+                    <strong>Solution:</strong> Implemented robust input validation with clear error messages to guide users in providing appropriate inputs.<br><br>
+                    <strong>Challenge 3:</strong> Balancing simplicity with interactivity for a fun user experience.<br>
+                    <strong>Solution:</strong> Focused on creating a straightforward interface with responsive feedback for winning or losing conditions.
+                </p>
+
+                <h3>Technologies Used</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="project-links">
+        <div class="container">
+            <h2>Explore More</h2>
+            <a href="#" class="button">Download Project</a>
+            <a href="#" class="button">View Source Code</a>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Darrell's Portfolio. All rights reserved.</p>
+    </div>
+</footer>
+<script>
+    document.querySelectorAll('.dropdown-toggle').forEach(item => {
+        item.addEventListener('click', event => {
+            event.preventDefault();
+
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                if (menu !== item.nextElementSibling) {
+                    menu.classList.remove('show');
+                }
+            });
+
+            const dropdownMenu = item.nextElementSibling;
+            dropdownMenu.classList.toggle('show');
+        });
+    });
+
+    window.addEventListener('click', function (event) {
+        if (!event.target.matches('.dropdown-toggle')) {
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                menu.classList.remove('show');
+            });
+        }
+    });
+</script>
+</body>
+</html>

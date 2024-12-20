@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo">Darrell's Portfolio</a>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Projects</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="MH.html">MediaHeaven</a></li>
+                        <li><a href="KQ.html">KostQu</a></li>
+                        <li><a href="WA.html">Weather App</a></li>
+                        <li><a href="abs.html">Absensi</a></li>
+                        <li><a href="RPUG.html">Password & Username Generator</a></li>
+                        <li><a href="RDG.html">Random Dice Generator</a></li>
+                        <li><a href="GTN.html">Guess The Number</a></li>
+                    </ul>
+                </li>
+                <li><a href="background.html">Background</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Social Media</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://www.instagram.com/darrell.satriano" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/in/darrell-satriano-b54380258/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/Grimarks" target="_blank">GitHub</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="project-header">
+        <div class="container">
+            <h1>KostQu</h1>
+            <p>Welcome to KostQu, your ultimate solution for finding the nearest and best Kost with affordable price ranges! Designed to help not only students but anyone in need of a place to stay, KostQu simplifies the search for quality accommodations.</p>
+        </div>
+    </section>
+
+    <section class="project-content">
+        <div class="container">
+            <div class="image-section">
+                <img src="../foto/project/KQ1.png" alt="KostQu">
+                <img src="../foto/project/KQ2.png" alt="KostQu">
+                <img src="../foto/project/KQ3.png" alt="KostQu">
+                <img src="../foto/project/KQ4.png" alt="KostQu">
+            </div>
+            <div class="details-section">
+                <h2>About the Project</h2>
+                <p>KostQu is a web-based platform designed to streamline the process of finding accommodations. It offers users an easy-to-navigate interface where they can search for Kosts based on name, location, and price range. The platform provides reliable information about each Kost, ensuring users make informed decisions. While initially targeted at students, the platform is beneficial for anyone searching for affordable and comfortable places to stay. The project was developed using basic HTML, CSS, JavaScript for the front-end, Node.js for back-end development, and MySQL for database management.</p>
+
+                <h3>Key Features</h3>
+                <ul>
+                    <li><strong>Search Functionality:</strong> Find Kosts by name for quick and precise results.</li>
+                    <li><strong>User-Friendly Interface:</strong> An intuitive and visually appealing design to enhance usability.</li>
+                    <li><strong>Comprehensive Information:</strong> Detailed data about Kosts, including price range, location, and facilities.</li>
+                </ul>
+
+                <h3>Development Process</h3>
+                <p>The development of KostQu involved creating a responsive and accessible web interface using HTML, CSS, and JavaScript. The back-end was built with Node.js to handle server-side logic, while MySQL was used to store and manage Kost data securely. The goal was to ensure seamless communication between the front-end and the database, enabling users to access real-time information.</p>
+
+                <h3>Challenges and Solutions</h3>
+                <p>
+                    <strong>Challenge 1:</strong> Hosting the website along with its database was a major obstacle. GitHub's limitations on server-side applications necessitated the exploration of alternative hosting options.<br>
+                    <strong>Solution:</strong> Hostinger was found to be a suitable solution; however, budget limitations restricted its use. For now, users must download and run the project locally to access it.<br><br>
+                    <strong>Challenge 2:</strong> Managing back-end logic was another significant challenge. Writing efficient server-side code required extensive trial-and-error, debugging, and careful flowcharting of the application's logic.<br>
+                    <strong>Solution:</strong> These efforts ultimately improved the system's robustness and ensured smooth functionality.
+                </p>
+
+                <h3>Technologies Used</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Node.js</li>
+                    <li>MySQL</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="project-links">
+        <div class="container">
+            <h2>Explore More</h2>
+            <a href="#" class="button">Download Project</a>
+            <a href="#" class="button">View Source Code</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Darrell's Portfolio. All rights reserved.</p>
+    </div>
+</footer>
+<script>
+    document.querySelectorAll('.dropdown-toggle').forEach(item => {
+        item.addEventListener('click', event => {
+            event.preventDefault();
+
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                if (menu !== item.nextElementSibling) {
+                    menu.classList.remove('show');
+                }
+            });
+
+            const dropdownMenu = item.nextElementSibling;
+            dropdownMenu.classList.toggle('show');
+        });
+    });
+
+    window.addEventListener('click', function (event) {
+        if (!event.target.matches('.dropdown-toggle')) {
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                menu.classList.remove('show');
+            });
+        }
+    });
+</script>
+</body>
+</html>

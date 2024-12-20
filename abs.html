@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo">Darrell's Portfolio</a>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Projects</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="MH.html">MediaHeaven</a></li>
+                        <li><a href="KQ.html">KostQu</a></li>
+                        <li><a href="WA.html">Weather App</a></li>
+                        <li><a href="abs.html">Absensi</a></li>
+                        <li><a href="RPUG.html">Password & Username Generator</a></li>
+                        <li><a href="RDG.html">Random Dice Generator</a></li>
+                        <li><a href="GTN.html">Guess The Number</a></li>
+                    </ul>
+                </li>
+                <li><a href="background.html">Background</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Social Media</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://www.instagram.com/darrell.satriano" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/in/darrell-satriano-b54380258/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/Grimarks" target="_blank">GitHub</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="project-header">
+        <div class="container">
+            <h1>Absensi</h1>
+            <p>Welcome to Absensi, a simple yet innovative web application that streamlines online attendance by capturing user photos, location data, and personal details. This project integrates Google Sheets for data storage and serves as a foundation for learning database integration and API usage.</p>
+        </div>
+    </section>
+
+    <section class="project-content">
+        <div class="container">
+            <div class="image-section">
+                <img src="../foto/project/abs1.png" alt="Absensi Interface">
+                <img src="../foto/project/abs2.png" alt="Absensi Interface">
+                <img src="../foto/project/abs3.png" alt="Absensi Interface">
+                <img src="../foto/project/abs4.png" alt="Absensi Interface">
+                <img src="../foto/project/abs5.png" alt="Absensi Interface">
+                <img src="../foto/project/abs6.png" alt="Absensi Form">
+                <img src="../foto/project/abs7.png" alt="Google Sheets Data">
+            </div>
+            <div class="details-section">
+                <h2>About the Project</h2>
+                <p>Absensi is a lightweight and efficient application designed to simplify attendance tracking. By capturing user photos, detecting their location, and storing the data in Google Sheets, it provides a practical solution for managing attendance records. The project was built using basic web technologies such as HTML, CSS, and JavaScript and introduces the use of Google Sheets as a simple database.</p>
+
+                <h3>Key Features</h3>
+                <ul>
+                    <li><strong>Photo Capture:</strong> Users can take photos directly through the app using their device's camera.</li>
+                    <li><strong>Location Detection:</strong> Automatically fetches the user's current location using a geolocation API.</li>
+                    <li><strong>Google Sheets Integration:</strong> Logs attendance data, including name, ID, photo link, and location, directly into Google Sheets.</li>
+                    <li><strong>User-Friendly Design:</strong> A clean and responsive interface for seamless user interaction.</li>
+                </ul>
+
+                <h3>Development Process</h3>
+                <p>The Absensi project was developed to explore the integration of APIs and a basic database using Google Sheets. The development process included:</p>
+                <ul>
+                    <li>Designing the front-end interface with HTML and CSS for simplicity and responsiveness.</li>
+                    <li>Adding functionality for photo capture using the device's camera and processing the images via HTML5 Canvas.</li>
+                    <li>Implementing a geolocation API to detect and display the user's current location.</li>
+                    <li>Integrating Google Apps Script to handle form submissions and store the data in Google Sheets.</li>
+                </ul>
+
+                <h3>Challenges and Solutions</h3>
+                <p>
+                    <strong>Challenge 1:</strong> The geolocation API occasionally failed to provide reliable data.<br>
+                    <strong>Solution:</strong> Considered migrating to a paid API for more accurate and consistent results, though it was not implemented due to budget constraints.<br><br>
+                    <strong>Challenge 2:</strong> Photos could not be directly stored in Google Sheets.<br>
+                    <strong>Solution:</strong> Uploaded the photos to Google Drive and inserted their respective links into Google Sheets to maintain a centralized record of all attendance data.
+                </p>
+
+                <h3>Technologies Used</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Google Apps Script</li>
+                    <li>Geolocation API</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="project-links">
+        <div class="container">
+            <h2>Explore More</h2>
+            <a href="#" class="button">Download Project</a>
+            <a href="#" class="button">View Source Code</a>
+        </div>
+    </section>
+</main>
+
+
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Darrell's Portfolio. All rights reserved.</p>
+    </div>
+</footer>
+<script>
+    document.querySelectorAll('.dropdown-toggle').forEach(item => {
+        item.addEventListener('click', event => {
+            event.preventDefault();
+
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                if (menu !== item.nextElementSibling) {
+                    menu.classList.remove('show');
+                }
+            });
+
+            const dropdownMenu = item.nextElementSibling;
+            dropdownMenu.classList.toggle('show');
+        });
+    });
+
+    window.addEventListener('click', function (event) {
+        if (!event.target.matches('.dropdown-toggle')) {
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                menu.classList.remove('show');
+            });
+        }
+    });
+</script>
+</body>
+</html>

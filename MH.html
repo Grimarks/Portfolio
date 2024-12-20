@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo">Darrell's Portfolio</a>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Projects</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="MH.html">MediaHeaven</a></li>
+                        <li><a href="KQ.html">KostQu</a></li>
+                        <li><a href="WA.html">Weather App</a></li>
+                        <li><a href="abs.html">Absensi</a></li>
+                        <li><a href="RPUG.html">Password & Username Generator</a></li>
+                        <li><a href="RDG.html">Random Dice Generator</a></li>
+                        <li><a href="GTN.html">Guess The Number</a></li>
+                    </ul>
+                </li>
+                <li><a href="background.html">Background</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Social Media</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://www.instagram.com/darrell.satriano" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/in/darrell-satriano-b54380258/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/Grimarks" target="_blank">GitHub</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="project-header">
+        <div class="container">
+            <h1>MediaHeaven</h1>
+            <p>Welcome to MediaHeaven, the ultimate platform for movie enthusiasts! With our powerful API, you can explore an extensive library of films and create personalized watchlists tailored to your viewing preferences.</p>
+        </div>
+    </section>
+
+    <section class="project-content">
+        <div class="container">
+            <div class="image-section">
+                <img src="../foto/project/MH1.png" alt="MediaHeaven">
+                <img src="../foto/project/MH2.png" alt="MediaHeaven">
+                <img src="../foto/project/MH3.png" alt="MediaHeaven">
+                <img src="../foto/project/MH4.png" alt="MediaHeaven">
+                <img src="../foto/project/MH5.png" alt="MediaHeaven">
+            </div>
+            <div class="details-section">
+                <h2>About the Project</h2>
+                <p>MediaHeaven is an interactive web application designed to elevate your movie-watching experience. Effortlessly browse through a rich catalog of films, complete with detailed information such as plot summaries, release dates, and cast members, all powered by an external API. A standout feature of MediaHeaven is the ability for registered users to create and manage personalized watchlists, helping you track and organize the films you want to see. Built on a robust foundation of HTML, CSS, and JavaScript for front-end development, MediaHeaven utilizes Node.js for backend operations and MySQL for secure data storage.</p>
+
+                <h3>Key Features</h3>
+                <ul>
+                    <li><strong>Comprehensive Movie Catalog:</strong> Access a vast database of films through an integrated API.</li>
+                    <li><strong>Personalized Watchlists:</strong> Create and manage custom lists of movies to watch.</li>
+                    <li><strong>User Accounts:</strong> Secure registration and login for a personalized experience.</li>
+                    <li><strong>Detailed Movie Information:</strong> In-depth details about each film, including plot, cast, and crew.</li>
+                    <li><strong>User-Friendly Interface:</strong> An intuitive and visually appealing design for an enjoyable experience.</li>
+                </ul>
+
+                <h3>Development Process</h3>
+                <p>The development of MediaHeaven was a collaborative effort that spanned various technologies. The front-end was crafted using HTML, CSS, and JavaScript, ensuring a visually appealing and user-friendly interface. Node.js was pivotal in managing server-side operations, including API integration, user authentication, and database interactions. MySQL was selected as the database system to securely store user data and watchlist information.</p>
+
+                <h3>Challenges and Solutions</h3>
+                <p>
+                    <strong>Challenge 1:</strong> Hosting the website along with its database was a major obstacle. GitHub's limitations on server-side applications necessitated the exploration of alternative hosting options.<br>
+                    <strong>Solution:</strong> Hostinger was found to be a suitable solution; however, budget limitations restricted its use. For now, users must download and run the project locally to access it.<br><br>
+                    <strong>Challenge 2:</strong> Managing back-end logic was another significant challenge. Writing efficient server-side code required extensive trial-and-error, debugging, and careful flowcharting of the application's logic.<br>
+                    <strong>Solution:</strong> These efforts ultimately improved the system's robustness and ensured smooth functionality.
+                </p>
+
+                <h3>Technologies Used</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Node.js</li>
+                    <li>MySQL</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="project-links">
+        <div class="container">
+            <h2>Explore More</h2>
+            <a href="#" class="button">View Live Project</a>
+            <a href="#" class="button">View Source Code</a>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Darrell's Portfolio. All rights reserved.</p>
+    </div>
+</footer>
+<script>
+    document.querySelectorAll('.dropdown-toggle').forEach(item => {
+        item.addEventListener('click', event => {
+            event.preventDefault();
+
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                if (menu !== item.nextElementSibling) {
+                    menu.classList.remove('show');
+                }
+            });
+
+            const dropdownMenu = item.nextElementSibling;
+            dropdownMenu.classList.toggle('show');
+        });
+    });
+
+    window.addEventListener('click', function (event) {
+        if (!event.target.matches('.dropdown-toggle')) {
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                menu.classList.remove('show');
+            });
+        }
+    });
+</script>
+</body>
+</html>

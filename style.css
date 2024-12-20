@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: #1e1e1e;
+    color: #fff;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.navbar {
+    background: #292929;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar nav {
+    float: right;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+}
+
+.menu a:hover {
+    background: #444;
+    border-radius: 5px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #444;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    list-style: none;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 5px 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.dropdown-menu a:hover {
+    background: #555;
+}
+
+.intro, .about, .skills, .story {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: 3rem;
+}
+
+.intro h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-img {
+    border-radius: 50%;
+    margin-bottom: 5%;
+    width: 250px;
+    height: 250px;
+}
+
+.skills ul {
+    list-style: none;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0;
+}
+
+.skills li {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background: #444;
+    border-radius: 20px;
+    font-size: 1rem;
+    color: #fff;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.skills li:hover {
+    transform: translateY(-10px);
+    background-color: #555;
+}
+
+footer {
+    text-align: center;
+    background: #292929;
+    padding: 20px;
+    margin-top: 20px;
+    color: #bbb;
+}

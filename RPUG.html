@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo">Darrell's Portfolio</a>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Projects</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="MH.html">MediaHeaven</a></li>
+                        <li><a href="KQ.html">KostQu</a></li>
+                        <li><a href="WA.html">Weather App</a></li>
+                        <li><a href="abs.html">Absensi</a></li>
+                        <li><a href="RPUG.html">Password & Username Generator</a></li>
+                        <li><a href="RDG.html">Random Dice Generator</a></li>
+                        <li><a href="GTN.html">Guess The Number</a></li>
+                    </ul>
+                </li>
+                <li><a href="background.html">Background</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Social Media</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://www.instagram.com/darrell.satriano" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/in/darrell-satriano-b54380258/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/Grimarks" target="_blank">GitHub</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="project-header">
+        <div class="container">
+            <h1>Random Password & Username Generator</h1>
+            <p>Welcome to the Random Password & Username Generator, a simple yet practical tool designed to create secure and customizable passwords and usernames. Whether you need a random username or want to generate a password with specific criteria, this project ensures flexibility and ease of use.</p>
+        </div>
+    </section>
+
+    <section class="project-content">
+        <div class="container">
+            <div class="image-section">
+                <img src="../foto/project/RPUG1.png" alt="Random Password & Username Generator Interface">
+                <img src="../foto/project/RPUG2.png" alt="Random Password & Username Generator Interface">
+                <img src="../foto/project/RPUG3.png" alt="Random Password & Username Generator Interface">
+                <img src="../foto/project/RPUG4.png" alt="Generated Results">
+            </div>
+            <div class="details-section">
+                <h2>About the Project</h2>
+                <p>The Random Password & Username Generator is a web-based application that allows users to generate secure passwords and optional usernames with customizable features. Built using HTML, CSS, and JavaScript, the project emphasizes functionality while maintaining a clean and simple design, making it an excellent tool for both beginners and professionals.</p>
+
+                <h3>Key Features</h3>
+                <ul>
+                    <li><strong>Customizable Passwords:</strong> Choose specific criteria such as uppercase letters, lowercase letters, numbers, symbols, and password length.</li>
+                    <li><strong>Optional Username:</strong> Generate a random username or input a custom one as per your preference.</li>
+                    <li><strong>User-Friendly Interface:</strong> Clean and intuitive design for seamless user interaction.</li>
+                    <li><strong>Validation:</strong> Ensures users select at least one password criterion to avoid errors.</li>
+                </ul>
+
+                <h3>Development Process</h3>
+                <p>The project was developed to provide a simple solution for creating secure credentials. The front-end was crafted using HTML and CSS to ensure a responsive and visually appealing layout. JavaScript powers the core functionality, including dynamic form interactions and password generation logic. Key challenges during development included handling validation for user inputs and ensuring the randomness and security of generated passwords, both of which were resolved through efficient coding and testing.</p>
+
+                <h3>Challenges and Solutions</h3>
+                <p>
+                    <strong>Challenge 1:</strong> Ensuring the randomness and security of the generated passwords.<br>
+                    <strong>Solution:</strong> By utilizing JavaScript's `Math.random()` function and combining multiple character sets, the project ensures high-quality randomness and password strength.<br><br>
+                    <strong>Challenge 2:</strong> Handling edge cases, such as when no password criteria are selected by the user.<br>
+                    <strong>Solution:</strong> Added validation to alert users and guide them to select at least one option for generating a password.<br><br>
+                    <strong>Challenge 3:</strong> Designing a user-friendly interface that works seamlessly across different screen sizes.<br>
+                    <strong>Solution:</strong> Employed responsive design techniques and CSS media queries to ensure compatibility with various devices.
+                </p>
+
+                <h3>Technologies Used</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="project-links">
+        <div class="container">
+            <h2>Explore More</h2>
+            <a href="#" class="button">Download Project</a>
+            <a href="#" class="button">View Source Code</a>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Darrell's Portfolio. All rights reserved.</p>
+    </div>
+</footer>
+<script>
+    document.querySelectorAll('.dropdown-toggle').forEach(item => {
+        item.addEventListener('click', event => {
+            event.preventDefault();
+
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                if (menu !== item.nextElementSibling) {
+                    menu.classList.remove('show');
+                }
+            });
+
+            const dropdownMenu = item.nextElementSibling;
+            dropdownMenu.classList.toggle('show');
+        });
+    });
+
+    window.addEventListener('click', function (event) {
+        if (!event.target.matches('.dropdown-toggle')) {
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                menu.classList.remove('show');
+            });
+        }
+    });
+</script>
+</body>
+</html>
