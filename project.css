@@ -208,3 +208,132 @@ footer p {
     margin: 0;
     font-size: 0.9rem;
 }
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger-menu span {
+    background: #fff;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+
+.hamburger-menu.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-menu.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.menu {
+    transition: all 0.3s ease;
+}
+
+.menu.active {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .navbar nav {
+        float: none;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        margin: 0;
+        padding: 5px 0;
+    }
+
+    .intro, .about, .skills, .story {
+        padding: 20px 10px;
+    }
+
+    .intro h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro h2 {
+        font-size: 1.2rem;
+    }
+
+    .profile-img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .profile p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .skills ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .skills li {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .logo {
+        font-size: 1.2rem;
+    }
+
+    .menu a {
+        font-size: 0.9rem;
+    }
+
+    .intro h1 {
+        font-size: 2rem;
+    }
+
+    .intro h2 {
+        font-size: 1rem;
+    }
+
+    .skills li {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+
+    footer {
+        font-size: 0.7rem;
+    }
+}
